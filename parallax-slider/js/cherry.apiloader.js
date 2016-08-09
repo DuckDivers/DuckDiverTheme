@@ -1,4 +1,4 @@
-var _window = $(window),
+var _window = jQuery(window),
     youtube_api_load = false,
     youtube_api_loaded = false,
     vimeo_api_load = false,

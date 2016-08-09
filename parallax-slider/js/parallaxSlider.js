@@ -855,7 +855,7 @@
         //------------------- get heigth function -------------------//
         function getBaseHeight(){
             
-            console.log(parallaxType);
+            //console.log(parallaxType);
             
             switch (parallaxType) {
                 case 'parallax_normal':
