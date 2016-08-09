@@ -1,0 +1,395 @@
+@import url("../CherryFramework/style.css");
+.parallax-slider { height:580px; }
+.parallax-slider #mainCaptionHolder .container { top:30%; }
+.parallax-slider #mainCaptionHolder .slider_caption {
+	text-align:center;
+	font-size:80px;
+	line-height:80px;
+	font-weight:300;
+	color:#fff;
+	text-shadow:1px 1px 0 rgba(0,0,0,0.25);
+}
+.parallax-slider #mainCaptionHolder .slider_caption h1, .parallax-slider #mainCaptionHolder .slider_caption h2 {
+	font-size:130px;
+	line-height:120px;
+	font-weight:500;
+	color:#fff;
+}
+.parallax-slider .controlBtn {
+	width:55px;
+	height:55px;
+	margin-top:-28px;
+}
+.parallax-slider .controlBtn .innerBtn {
+	font-size:31px;
+	line-height:55px;
+	color:#a9a9a9;
+	background:#fff;
+}
+.parallax-slider .controlBtn .slidesCounter {
+	font-size:16px;
+	line-height:55px;
+	color:#fff;
+	background:#005580;
+}
+.parallax-slider .controlBtn:hover .innerBtn {
+	color:#fff;
+	background:#005580;
+}
+.parallax-slider .parallaxPrevBtn, .parallax-slider .parallaxNextBtn {
+	-webkit-transition:all 0.5s ease;
+	-moz-transition:all 0.5s ease;
+	-o-transition:all 0.5s ease;
+	transition:all 0.5s ease;
+}
+.parallax-slider .parallaxPrevBtn { left:-55px; }
+.parallax-slider .parallaxNextBtn { right:-55px; }
+.parallax-slider:hover .parallaxPrevBtn { left:0; }
+.parallax-slider:hover .parallaxNextBtn { right:0; }
+.parallax-slider #paralaxSliderPagination {
+	padding:10px 0;
+	bottom:0px;
+}
+.parallax-slider #paralaxSliderPagination.buttons_pagination ul li {
+	border-radius:50%;
+	margin:3px;
+	width:15px;
+	height:15px;
+	border:2px solid #fff;
+}
+.parallax-slider #paralaxSliderPagination.buttons_pagination ul li:hover, .parallax-slider #paralaxSliderPagination.buttons_pagination ul li.active { background:#005580; }
+.parallax-slider #paralaxSliderPagination.images_pagination ul li {
+	margin:3px;
+	opacity:.5;
+}
+.parallax-slider #paralaxSliderPagination.images_pagination ul li:hover, .parallax-slider #paralaxSliderPagination.images_pagination ul li.active { opacity:1; }
+.parallax-slider .parallax-slider-video-progress { background:#0088cc; }
+.parallax-slider #previewSpinner {
+	width:50px;
+	height:50px;
+	margin-left:-25px;
+	margin-top:-25px;
+	border-radius:25px;
+	background:url(parallax-slider/img/spinner.GIF) 50% 50% #fff no-repeat;
+}
+.parallax-slider {
+	overflow:hidden;
+	position:relative;
+	-ms-transform:translateZ(0);
+	transform:translateZ(0);
+}
+.parallax-slider .baseList { display:none; }
+.parallax-slider .parallax-slider-video-progress-bar {
+	position:absolute;
+	overflow:hidden;
+	top:0;
+	left:0;
+	width:100%;
+	height:8px;
+	background:url(parallax-slider/img/loader.gif) 0 0 repeat-x;
+	z-index:5;
+}
+.parallax-slider .parallax-slider-video-progress {
+	width:0;
+	height:100%;
+	-webkit-transition:all .5s;
+	-moz-transition:all .5s;
+	-o-transition:all .5s;
+	transition:all .5s;
+}
+.parallax-slider .parallax-slider-vimeo-video { overflow:hidden; }
+.parallax-slider .parallax-slider-vimeo-video .parallax-slider-vimeo-iframe {
+	margin-top:-100px;
+	max-width:none;
+}
+.parallax-slider #mainImageHolder {
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	z-index:1;
+}
+.parallax-slider #mainImageHolder .primaryHolder, .parallax-slider #mainImageHolder .secondaryHolder {
+	position:absolute;
+	width:100%;
+	top:0;
+	left:0;
+}
+.parallax-slider #mainImageHolder .primaryHolder .obj-inner, .parallax-slider #mainImageHolder .secondaryHolder .obj-inner {
+	max-width:inherit;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:cover;
+}
+.parallax-slider #mainCaptionHolder {
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	z-index:2;
+}
+.parallax-slider #mainCaptionHolder >a {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+.parallax-slider #mainCaptionHolder .container { position:relative; }
+.parallax-slider #mainCaptionHolder .primaryCaption, .parallax-slider #mainCaptionHolder .secondaryCaption {
+	position:absolute;
+	width:100%;
+	top:0;
+	left:0;
+}
+.parallax-slider .controlBtn {
+	position:absolute;
+	cursor:pointer;
+	display:block;
+	top:50%;
+	z-index:2;
+}
+.parallax-slider .controlBtn .innerBtn {
+	-webkit-transition:all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+	-o-transition:all 0.3s ease;
+	transition:all 0.3s ease;
+	position:relative;
+	display:block;
+	width:100%;
+	height:100%;
+	text-align:center;
+	z-index:1;
+}
+.parallax-slider .controlBtn .slidesCounter {
+	-webkit-transition:all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+	-o-transition:all 0.3s ease;
+	transition:all 0.3s ease;
+	position:absolute;
+	top:0;
+	width:60%;
+	height:100%;
+}
+.parallax-slider .controlBtn.parallaxPrevBtn .slidesCounter {
+	left:0%;
+	text-align:left;
+}
+.parallax-slider .controlBtn.parallaxPrevBtn:hover .slidesCounter { left:100%; }
+.parallax-slider .controlBtn.parallaxNextBtn .slidesCounter {
+	right:0%;
+	text-align:right;
+}
+.parallax-slider .controlBtn.parallaxNextBtn:hover .slidesCounter { right:100%; }
+.parallax-slider #paralaxSliderPagination {
+	position:absolute;
+	width:100%;
+	text-align:center;
+	z-index:2;
+}
+.parallax-slider #paralaxSliderPagination ul {
+	list-style:none;
+	margin:0;
+}
+.parallax-slider #paralaxSliderPagination ul li {
+	-webkit-transition:all 0.5s ease;
+	-moz-transition:all 0.5s ease;
+	-o-transition:all 0.5s ease;
+	transition:all 0.5s ease;
+	cursor:pointer;
+	display:inline-block;
+}
+.parallax-slider #previewSpinner {
+	position:absolute;
+	display:block;
+	top:50%;
+	left:50%;
+	z-index:99;
+}
+.parallax-slider.zoom-fade-eff #mainImageHolder .primaryHolder {
+	opacity:1;
+	filter:alpha(opacity=100);
+	-webkit-transform:scale(1);
+	-moz-transform:scale(1);
+	-ms-transform:scale(1);
+	-o-transform:scale(1);
+	transform:scale(1);
+}
+.parallax-slider.zoom-fade-eff #mainImageHolder .primaryHolder.animateState {
+	opacity:0;
+	filter:alpha(opacity=0);
+	-webkit-transform:scale(3);
+	-moz-transform:scale(3);
+	-ms-transform:scale(3);
+	-o-transform:scale(3);
+	transform:scale(3);
+}
+.parallax-slider.zoom-fade-eff #mainImageHolder .secondaryHolder {
+	opacity:1;
+	filter:alpha(opacity=100);
+}
+.parallax-slider.zoom-fade-eff #mainImageHolder .secondaryHolder.animateState {
+	opacity:0;
+	filter:alpha(opacity=0);
+}
+.parallax-slider.zoom-fade-eff #mainCaptionHolder .primaryCaption {
+	opacity:1;
+	filter:alpha(opacity=100);
+}
+.parallax-slider.zoom-fade-eff #mainCaptionHolder .primaryCaption.animateState {
+	opacity:0;
+	filter:alpha(opacity=0);
+}
+.parallax-slider.zoom-fade-eff #mainCaptionHolder .secondaryCaption {
+	opacity:1;
+	filter:alpha(opacity=100);
+}
+.parallax-slider.zoom-fade-eff #mainCaptionHolder .secondaryCaption.animateState {
+	opacity:0;
+	filter:alpha(opacity=0);
+}
+.parallax-slider.simple-fade-eff #mainImageHolder .primaryHolder {
+	opacity:1;
+	filter:alpha(opacity=100);
+}
+.parallax-slider.simple-fade-eff #mainImageHolder .primaryHolder.animateState {
+	opacity:0;
+	filter:alpha(opacity=0);
+}
+.parallax-slider.simple-fade-eff #mainImageHolder .secondaryHolder.animateState {
+	opacity:1;
+	filter:alpha(opacity=100);
+}
+.parallax-slider.simple-fade-eff #mainImageHolder .secondaryHolder.animateState.animateState {
+	opacity:0;
+	filter:alpha(opacity=0);
+}
+.parallax-slider.simple-fade-eff #mainCaptionHolder .primaryCaption {
+	opacity:1;
+	filter:alpha(opacity=100);
+	-webkit-transform:scale(1);
+	-moz-transform:scale(1);
+	-ms-transform:scale(1);
+	-o-transform:scale(1);
+	transform:scale(1);
+}
+.parallax-slider.simple-fade-eff #mainCaptionHolder .primaryCaption.animateState {
+	opacity:0;
+	filter:alpha(opacity=0);
+}
+.parallax-slider.simple-fade-eff #mainCaptionHolder .secondaryCaption {
+	opacity:1;
+	filter:alpha(opacity=100);
+}
+.parallax-slider.simple-fade-eff #mainCaptionHolder .secondaryCaption.animateState {
+	opacity:0;
+	filter:alpha(opacity=0);
+}
+.parallax-slider.slide-top-eff #mainImageHolder .primaryHolder { top:0; }
+.parallax-slider.slide-top-eff #mainImageHolder .primaryHolder.animateState { top:-100%; }
+.parallax-slider.slide-top-eff #mainImageHolder .secondaryHolder.animateState { top:0; }
+.parallax-slider.slide-top-eff #mainImageHolder .secondaryHolder.animateState.animateState { top:100%; }
+.parallax-slider.slide-top-eff #mainCaptionHolder .primaryCaption {
+	opacity:1;
+	filter:alpha(opacity=100);
+	-webkit-transform:scale(1);
+	-moz-transform:scale(1);
+	-ms-transform:scale(1);
+	-o-transform:scale(1);
+	transform:scale(1);
+}
+.parallax-slider.slide-top-eff #mainCaptionHolder .primaryCaption.animateState {
+	opacity:0;
+	filter:alpha(opacity=0);
+}
+.parallax-slider.slide-top-eff #mainCaptionHolder .secondaryCaption {
+	opacity:1;
+	filter:alpha(opacity=100);
+}
+.parallax-slider.slide-top-eff #mainCaptionHolder .secondaryCaption.animateState {
+	opacity:0;
+	filter:alpha(opacity=0);
+}
+html, body { overflow-x:hidden; }
+h1 {
+	font:normal 30px/35px "Cinzel Decorative";
+	color:#D40005;
+}
+h2 {
+	font:normal 22px/26px Arial, Helvetica, sans-serif;
+	color:#333333;
+}
+h3 {
+	font:normal 18px/22px Arial, Helvetica, sans-serif;
+	color:#333333;
+}
+h4 {
+	font:normal 14px/20px Arial, Helvetica, sans-serif;
+	color:#333333;
+}
+h5 {
+	font:normal 12px/18px Arial, Helvetica, sans-serif;
+	color:#333333;
+}
+h6 {
+	font:normal 12px/18px Arial, Helvetica, sans-serif;
+	color:#333333;
+}
+body {
+	font:normal 12px/18px Arial, Helvetica, sans-serif;
+	color:#333333;
+}
+.logo_h__txt, .logo_link {
+	font:bold 72px/1.2 "Cinzel Decorative";
+	color:#D40005;
+}
+.sf-menu > li > a {
+	font:normal 12px/18px Arial, Helvetica, sans-serif;
+	color:#1133AA;
+}
+.nav.footer-nav a {
+	font:normal 12px/18px Arial, Helvetica, sans-serif;
+	color:#0088CC;
+}
+.home .motopress-wrapper.content-holder.clearfix { background:#67b5c8; }
+figure.homepage-featured {
+	display:table;
+	margin-left:auto;
+	margin-right:auto;
+	border-radius:50%;
+	overflow:hidden;
+	z-index:1;
+	-webkit-mask-image:-webkit-radial-gradient(circle,white,black);
+}
+.homepage-featured a img { transition:all .3s ease-out; }
+.homepage-featured a:hover img {
+	transform:scale(1.2) rotate(-12.5deg);
+	transition:all .3s ease-out;
+	z-index:0;
+}
+.blue-bg { background:#049cdb; }
+.blue-bg:before, .blue-bg:after { background:#049cdb; }
+.clearfix { *zoom:1; }
+.clearfix:before, .clearfix:after {
+	display:table;
+	content:"";
+	line-height:0;
+}
+.clearfix:after { clear:both; }
+.hide-text {
+	font:0/0 a;
+	color:transparent;
+	text-shadow:none;
+	background-color:transparent;
+	border:0;
+}
+.input-block-level {
+	display:block;
+	width:100%;
+	min-height:28px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
